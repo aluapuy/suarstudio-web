@@ -14,7 +14,7 @@ function initialLang(): Lang {
   const fromUrl = new URLSearchParams(window.location.search).get("lang");
   if (isLang(fromUrl)) return fromUrl;
   const stored = localStorage.getItem(STORAGE_KEY);
-  return isLang(stored) ? stored : "id";
+  return isLang(stored) ? stored : "en";
 }
 
 export function LangProvider({ children }: { children: ReactNode }) {
