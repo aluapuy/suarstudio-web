@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-alabaster: #F6F4EE;
+  --color-sand: #EAE6DF;
+  --color-sand-border: #DCD6CC;
+  --color-obsidian: #161615;
+  --color-charcoal: #1C1B19;
+  --color-slate: #534F49;
+  --color-brass: #C59B27;
+  --color-terracotta: #9E4424;
+  --color-terracotta-hover: #833519;
+  --color-cypress: #264D3A;
+  --color-cypress-tint: #E3EFE8;
+
+  --font-serif: "Instrument Serif", "Newsreader", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-alabaster text-charcoal font-sans antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-serif font-normal tracking-tight;
+  }
+  em {
+    @apply italic;
+  }
+  a[href],
+  button:not(:disabled),
+  summary,
+  select,
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brass);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

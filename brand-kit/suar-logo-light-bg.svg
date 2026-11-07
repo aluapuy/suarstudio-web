@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" width="1040" height="256" fill="none">
+  <!-- Suar Studio — Horizontal Lockup (For Light / Alabaster Background #F6F4EE) -->
+  <g stroke="#C59B27" stroke-width="8" stroke-linecap="round" fill="none">
+    <line x1="64" y1="40" x2="64" y2="112" />
+    <line x1="40" y1="72" x2="88" y2="72" />
+    <path d="M64 40 C64 24, 52 16, 56 8 C60 16, 64 14, 64 8 C64 14, 68 16, 72 8 C76 16, 64 24, 64 40" fill="#C59B27" stroke="none" />
+  </g>
+  <g fill="#C59B27" opacity="0.55">
+    <rect x="20" y="64" width="8" height="24" rx="4" />
+    <rect x="100" y="60" width="8" height="32" rx="4" />
+    <rect x="8" y="72" width="8" height="12" rx="4" />
+    <rect x="112" y="68" width="8" height="20" rx="4" />
+  </g>
+  <text x="148" y="84" fill="#1C1B19" font-family="'Instrument Serif', 'Newsreader', Georgia, serif" font-size="68" letter-spacing="-0.02em">Suar Studio</text>
+</svg>

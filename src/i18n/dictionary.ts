@@ -1,0 +1,835 @@
+// All user-visible copy. `id` is the source of truth; `en` must match its shape (compile-time check).
+// Words wrapped in *asterisks* render as serif italics with a brass underline (see <Rich />).
+
+const id = {
+  meta: {
+    title: "Suar Studio · Mitra Kreatif & Otomasi Pelayanan Gereja Berbasis AI",
+  },
+  nav: {
+    links: [
+      "Mengapa Suar",
+      "Ritme Senin",
+      "Roadmap Otomasi",
+      "Investasi",
+    ],
+    cta: "Coba Gratis 2 Minggu",
+    menuLabel: "Menu",
+    openMenu: "Buka menu navigasi",
+    closeMenu: "Tutup menu navigasi",
+    langLabel: "Pilih bahasa",
+  },
+  hero: {
+    eyebrow: "Studio Pemuridan Digital · Dikurasi Manusia, Dipercepat AI",
+    headline:
+      "Mimbar Hari Minggu Selesai. Biarkan Pesannya *Terus Menjangkau Jiwa* Sepanjang Minggu.",
+    sub: "Suar Studio memadukan jiwa pelayanan dengan presisi AI untuk mengubah 1 khotbah Minggu menjadi klip harian siap unggah yang menjangkau hati jemaat lewat smartphone setiap hari. Bukan sekadar alat otomatis yang memotong ayat di luar konteks: setiap klip dirancang utuh untuk memantik obrolan Komsel hingga otomasi pelayanan gereja, 100% di bawah persetujuan gereja Anda.",
+    trustPills: [
+      "Dikurasi Tim Manusia + Presisi AI",
+      "100% Sesuai Kalimat Asli Pengkhotbah",
+      "Persetujuan Tim Gereja Setiap Senin 09:00",
+    ],
+    ctaPrimary: "Klaim Uji Coba Gratis 2 Minggu",
+    ctaNote: "Khusus 5 Gereja Mitra Pertama · DM @suarstudio.co",
+    ctaSecondary: "Tonton Video Profil (45 dtk)",
+    ctaExplore: "Lihat Ekosistem Karya",
+    videoModalTitle: "Suar Studio · Profil Ekosistem Pemuridan Digital (45 Detik)",
+    videoModalClose: "Tutup Video",
+  },
+  mockup: {
+    sermon: "1 MASTER KHOTBAH (58:20)",
+    generatedBadge: "KLIP HARIAN + PANDUAN KOMSEL",
+    mapping: "Menemukan momen terbaik dari khotbah Minggu",
+    dragHint: "Geser untuk Menjelajah",
+    prevPhone: "Lihat klip sebelumnya",
+    nextPhone: "Lihat klip berikutnya",
+    goToPhone: "Lihat klip",
+    speakerLock: "SPEAKER LOCK",
+    frames: ["Ibadah Raya", "Youth / Pemuda", "Kids & Keluarga"],
+    frameSub: ["Klip Renungan", "Tipografi Dinamis", "Cerita Visual"],
+    captions: [
+      "Kasih karunia-Nya cukup",
+      "Jangan takut gagal, Tuhan pegang kendali!",
+      "Tuhan selalu menepati janji-Nya!",
+    ],
+    youthVerse: "YER 29:11",
+    kidsBadge: "[00:22 · ANAK]",
+    bottomPill: "1 Khotbah → Ekosistem Pemuridan & Otomasi Sepekan",
+    phoneList: [
+      {
+        id: "youth-1",
+        image: "/images/phones/youth_1.jpg",
+        category: "Youth (Pemuda)",
+        badge: "KLIP #1 · RELEVAN",
+        title: "“Jangan takut gagal, Tuhan pegang kendali hidupmu!”",
+        tag: "KINETIC TYPOGRAPHY",
+        sub: "AUTO-TRACK",
+        duration: "00:24",
+      },
+      {
+        id: "sunday-1",
+        image: "/images/phones/sunday_1.jpg",
+        category: "Ibadah Raya",
+        badge: "KLIP #1 · RENUNGAN",
+        title: "“Kasih karunia-Nya cukup bagimu dalam setiap musim.”",
+        tag: "SPEAKER LOCK",
+        sub: "KALIMAT ASLI KHOTBAH",
+        duration: "00:54",
+      },
+      {
+        id: "kids-1",
+        image: "/images/phones/kids_1.jpg",
+        category: "Kids (Sekolah Minggu)",
+        badge: "CERITA ALKITAB · KIDS #1",
+        title: "“Tuhan selalu menepati janji-Nya kepada kita!”",
+        tag: "AUDIO STORYBOOK",
+        sub: "ILUSTRASI CERITA ALKITAB",
+        duration: "00:22",
+      },
+      {
+        id: "sunday-2",
+        image: "/images/phones/sunday_2.jpg",
+        category: "Ibadah Raya",
+        badge: "KLIP #2 · RENUNGAN",
+        title: "“Berjalan dalam terang firman-Nya setiap hari.”",
+        tag: "AUTO-SCRIPTURE",
+        sub: "EFESUS 2:8",
+        duration: "00:48",
+      },
+      {
+        id: "youth-2",
+        image: "/images/phones/youth_2.jpg",
+        category: "Youth (Pemuda)",
+        badge: "KLIP #2 · INSPIRATIF",
+        title: "“Masa depanmu tidak ditentukan oleh masa lalumu.”",
+        tag: "YOUTH HOOK AI",
+        sub: "YEREMIA 29:11",
+        duration: "00:30",
+      },
+      {
+        id: "kids-2",
+        image: "/images/phones/kids_2.jpg",
+        category: "Kids (Sekolah Minggu)",
+        badge: "KIDS #2 · CERITA KELUARGA",
+        title: "“Bersama Tuhan, kita berani hadapi apa pun!”",
+        tag: "OBROLAN KELUARGA",
+        sub: "REFLEKSI ORTU & ANAK",
+        duration: "00:28",
+      },
+      {
+        id: "sunday-3",
+        image: "/images/phones/sunday_3.jpg",
+        category: "Ibadah Raya",
+        badge: "PEMURIDAN SEPEKAN",
+        title: "Menemani Jemaat Senin hingga Sabtu",
+        tag: "MULTI-PLATFORM",
+        sub: "IG & WA KOMSEL",
+        duration: "SENIN 09:00",
+      },
+      {
+        id: "youth-3",
+        image: "/images/phones/youth_3.jpg",
+        category: "Youth (Pemuda)",
+        badge: "RETENSI GENERASI MUDA",
+        title: "Menjangkau Anak Muda di Layar Mereka",
+        tag: "MULTI-PLATFORM",
+        sub: "MEDSOS & WA GROUP",
+        duration: "SENIN 09:00",
+      },
+      {
+        id: "kids-3",
+        image: "/images/phones/kids_3.jpg",
+        category: "Kids (Sekolah Minggu)",
+        badge: "FITUR MENDATANG",
+        title: "Bawa Pesan Sekolah Minggu ke Rumah",
+        tag: "OBROLAN KELUARGA",
+        sub: "BUKU CERITA & ORTU",
+        duration: "ROADMAP",
+      },
+    ],
+  },
+  why: {
+    eyebrow: "Realita Pelayanan vs Standar Suar Studio",
+    heading:
+      "Lebih dari Sekadar Pemotong Video. *Tanpa Potongan* di Luar Konteks.",
+    sub: "Banyak gereja terjebak di antara dua pilihan ekstrem: relawan media yang kelelahan mengedit manual hingga larut malam, atau mempercayakan khotbah pada aplikasi pemotong instan yang memotong kalimat di luar konteks teologis.",
+    comparison: {
+      manual: {
+        tag: "LEMBUR MANUAL",
+        title: "6 hingga 10+ Jam Setiap Minggu",
+        subtitle:
+          "Relawan kelelahan menonton ulang 60 menit khotbah, memotong frame, dan mengetik subtitle hingga larut malam.",
+        timelineLabel: "TIMELINE EDIT MANUAL · SENIN 23:58",
+        status: "Risiko Burnout Tinggi",
+      },
+      genericAi: {
+        tag: "APLIKASI POTONG INSTAN",
+        title: "Memotong di Luar Konteks",
+        subtitle:
+          "Alat pemotong otomatis yang memotong di tengah ayat, kehilangan hati penggembalaan, dan menghasilkan caption kaku tanpa pengawasan.",
+        badQuote: "“Sebab oleh kasih karunia kamu...”",
+        badCutBadge: "✂ POTONGAN TERPUTUS",
+        status: "Risiko Teologis",
+      },
+      suarStandard: {
+        tag: "STANDAR SUAR STUDIO",
+        title: "Dikurasi Manusia, Dipercepat AI",
+        subtitle:
+          "Presisi AI menangani pelacakan pembicara dan visual, sementara kami mengkurasi pesan yang utuh lengkap dengan caption & pemantik obrolan Komsel, 100% disetujui tim gereja Anda.",
+        check1: "Kalimat Asli Utuh + Menit Tepat",
+        check2: "Persetujuan Tim Gereja Senin 09:00",
+        status: "Aman & Siap Pakai",
+      },
+    },
+    benefits: [
+      {
+        badge: "01 · INTEGRITAS TEOLOGIS",
+        title: "100% Kalimat Asli Tanpa Parafrase",
+        desc: "Kami tidak pernah membiarkan AI mengubah makna atau merekayasa firman. Setiap klip merujuk pada menit khotbah nyata dengan ayat Alkitab yang diverifikasi.",
+      },
+      {
+        badge: "02 · JEMBATAN GENERASI & DIASPORA",
+        title: "Bahasa Relevan untuk Dewasa, Youth & Diaspora",
+        desc: "Klip khotbah dikemas dalam format yang tepat: nada teduh untuk jemaat dewasa, tipografi kinetik dinamis untuk Youth, serta subtitle dwibahasa alami (ID/EN) untuk jemaat diaspora.",
+      },
+      {
+        badge: "03 · KENDALI PENUH DI TANGAN GEREJA",
+        title: "SOP Senin 09:00: Cukup Balas 'OK'",
+        desc: "Gereja memegang kendali penuh atas apa yang tayang. Anda tidak perlu repot belajar software baru—cukup review preview di WhatsApp setiap Senin pagi.",
+      },
+    ],
+    ctaButton: "Klaim Uji Coba Gratis 2 Minggu",
+    ctaNote: "Khusus 5 Gereja Mitra Pertama · DM @suarstudio.co",
+  },
+  sop: {
+    eyebrow: "Ritme Mingguan & Garansi Teologis",
+    heading: "Kecepatan AI. *Kendali Penuh* di Tangan Gereja Anda.",
+    sub: "Alur kerja yang dirancang agar tim media tidak terbebani: AI mempercepat pekerjaan teknis, namun tidak ada satu klip pun yang dibuat sebelum tim gereja Anda setuju.",
+    antiSlopBadge: "GARANSI 100% KALIMAT ASLI KHOTBAH",
+    antiSlopText:
+      "Kami tidak pernah membiarkan AI mengarang teologi atau memparafrasekan kalimat khotbah. Setiap klip dan pemantik obrolan Komsel bersumber 100% dari transkrip asli khotbah Minggu Anda.",
+    steps: [
+      {
+        when: "Minggu Malam",
+        title: "Tautan YouTube Diambil Otomatis",
+        body: "Begitu ibadah Minggu selesai, sistem kami mengambil tautan YouTube gereja Anda, mencatat isi khotbah, dan menandai momen-momen kuncinya.",
+        code: "INPUT: 1–2 TAUTAN YOUTUBE",
+      },
+      {
+        when: "Senin 09:00 Pagi",
+        title: "Persetujuan via WhatsApp",
+        body: "Sebelum video digunakan oleh gereja di media sosial atau Komsel, kami mengirimkan preview klip dan kutipan khotbah ke WhatsApp tim gereja yang ditunjuk untuk dinilai kelayakannya.",
+        code: "[24:15 - 25:10]",
+      },
+      {
+        when: "Selasa Pagi",
+        title: "Klip Disetujui Siap Unggah",
+        body: "Setelah dinilai dan disetujui tim gereja dengan balasan “OK” sederhana, seluruh klip vertikal siap pakai beserta caption & panduan Komsel langsung siap dibagikan ke jemaat.",
+        code: "SIAP DIGUNAKAN GEREJA",
+      },
+    ],
+  },
+  demo: {
+    eyebrow: "Simulasi Interaktif Senin 09:00",
+    heading: "Tim Gereja Memegang *Kata Terakhir*.",
+    sub: "Coba sendiri betapa ringkasnya persetujuan Senin pagi. Ketuk tombol “Kirim OK” di bawah seperti yang dilakukan tim gereja Anda di WhatsApp.",
+    chatName: "Suar Studio · SOP Persetujuan",
+    online: "online · Senin 09:00",
+    sample: "Simulasi Interaktif",
+    greeting:
+      "Selamat pagi, Tim Gereja. Berikut 3 kutipan asli dari khotbah Minggu kemarin untuk disetujui sebelum masuk tahap produksi:",
+    quotes: [
+      {
+        code: "[24:15 - 25:10] · Ibadah Raya",
+        text: "“Kasih karunia-Nya cukup bagi kita, bukan karena kita kuat, tetapi karena Dia setia.”",
+      },
+      {
+        code: "[31:02 - 31:48] · Youth / Pemuda",
+        text: "“Kelemahan kita justru adalah tempat di mana kuasa Kristus menjadi sempurna.”",
+      },
+      {
+        code: "[38:40 - 39:22] · Pengutusan & Komsel",
+        text: "“Minggu ini, bawalah satu beban terberat Anda kepada-Nya di dalam doa bersama.”",
+      },
+    ],
+    prompt: "Balas OK untuk memulai produksi minggu ini.",
+    sendOk: "Ketuk untuk Kirim “OK” (Simulasi Tim Gereja)",
+    pastorReply: "OK, lanjutkan produksi.",
+    typing: "Tim Suar Studio sedang memproses...",
+    approvedMsg:
+      "Terima kasih, Tim Gereja. Disetujui ✓ Pipeline produksi studio telah berjalan:",
+    renderItems: [
+      "Video vertikal Ibadah Raya & Youth (9:16)",
+      "Teks caption siap unggah & subtitle terverifikasi",
+      "Pertanyaan pemantik obrolan Komsel & WA",
+    ],
+    ready: "✓ Dijadwalkan terkirim Selasa 09:00",
+    replay: "Ulangi Simulasi Persetujuan",
+  },
+  eco: {
+    eyebrow: "1 Khotbah → Ekosistem Pemuridan Mingguan",
+    heading: "Satu Tautan YouTube. *Satu Ekosistem* Lintas Generasi.",
+    sub: "Setiap generasi menerima pesan Minggu yang sama, dikemas dalam bahasa visual, nada penyampaian, dan format yang menyentuh hati mereka sepanjang Senin hingga Jumat.",
+    deliverableCount: "Klip Harian + Pemantik Komsel Setiap Minggu",
+    tabs: [
+      {
+        label: "Ibadah Raya",
+        mood: "Tenang, Hangat & Editorial",
+        countTag: "Aktif · 3–6 Klip Vertikal / Minggu",
+        body: "Bingkai vertikal 9:16 untuk ditonton di smartphone masing-masing jemaat, kamera selalu mengikuti pengkhotbah, tipografi hangat, dan jumlah klip (3–6) disesuaikan agar selalu selaras dengan pesan utama khotbah.",
+        specs: ["9:16 Vertikal HD", "Kamera Mengikuti Pembicara", "Subtitle ID / EN"],
+      },
+      {
+        label: "Youth (Pemuda)",
+        mood: "Dinamis, Tegas & Kinetik",
+        countTag: "Aktif · Ibadah Youth Khusus (3–5 Klip / Minggu)",
+        body: "Kliping khusus ibadah pemuda dengan kurasi momen paling relevan bagi generasi muda, tipografi kinetik beraksen tegas, dan terjemahan dwibahasa alami untuk pemuda perkotaan maupun diaspora.",
+        specs: ["Retensi Tinggi", "Tipografi Kinetik", "Terjemahan Dwibahasa Alami"],
+      },
+      {
+        label: "Sekolah Minggu",
+        mood: "Ilustratif, Cerita Alkitab & Obrolan Keluarga",
+        countTag: "Segera Hadir · 2x Animasi Cerita Alkitab / Minggu",
+        body: "Fitur dalam pengembangan: 2 video animasi singkat kisah Alkitab per minggu yang terhubung dengan tema ibadah anak, lengkap dengan panduan obrolan hangat orang tua bersama anak sebelum tidur.",
+        specs: ["2x Animasi Cerita Alkitab (Roadmap)", "Pertanyaan Orang Tua & Anak", "Format Ramah Smartphone"],
+      },
+      {
+        label: "Komsel / COOL",
+        mood: "Ekosistem Kelompok Kecil & Renungan Harian",
+        countTag: "Aktif · Panduan Diskusi PDF A4 + 5x Renungan WA",
+        body: "Panduan diskusi PDF A4 bergaya editorial yang rapi untuk memandu obrolan kelompok kecil, serta 5 renungan harian WhatsApp (Senin hingga Jumat) untuk memperdalam firman.",
+        specs: ["PDF A4 Siap Cetak/HP", "Pertanyaan Diskusi Terarah", "5x Renungan Harian WA"],
+      },
+    ],
+  },
+  roadmap: {
+    eyebrow: "Roadmap Masa Depan Dekat · Dalam Pengembangan Aktif",
+    heading: "Mendampingi Gereja Anda *Melampaui* Sekadar Klip Video.",
+    sub: "Fokus kami saat ini adalah klip khotbah dan panduan Komsel mingguan. Empat otomasi berikut sedang dikembangkan, dan Gereja Mitra Pertama mendapat akses lebih dulu.",
+    statusPill: "DALAM PENGEMBANGAN",
+    items: [
+      {
+        badge: "ARSIP PINTAR",
+        title: "Pencarian Arsip Khotbah via WhatsApp (RAG)",
+      },
+      {
+        badge: "PENGGEMBALAAN",
+        title: "Alur Sapaan Tamu Baru & Pengingat Komsel",
+      },
+      {
+        badge: "KOMUNIKASI",
+        title: "Otomasi Warta Jemaat & Jembatan Multi-Bahasa",
+      },
+      {
+        badge: "LITERATUR",
+        title: "Kompilasi Seri Khotbah Menjadi Buku Renungan",
+      },
+    ],
+  },
+  pricing: {
+    eyebrow: "Investasi Pelayanan Bulanan",
+    heading: "Investasi yang *Transparan* & Terukur.",
+    sub: "Lebih hemat dibandingkan merekrut editor penuh waktu, tanpa kontrak jangka panjang yang mengikat. Disesuaikan otomatis dengan mata uang wilayah Anda.",
+    perMonth: "/ bln",
+    popular: "Pilihan Utama Gereja & Diaspora",
+    discountBadge: "Tarif Khusus Perintis",
+    cta: "Klaim Uji Coba Gratis 2 Minggu",
+    note: "Tarif bulanan tetap tanpa komitmen tahunan. Dapat dihentikan kapan saja.",
+    voucher: {
+      passNumber: "TRIAL PASS #0001 · KHUSUS 5 GEREJA MITRA PERTAMA",
+      title: "Uji Coba Ekosistem Penuh: 2 Minggu Gratis",
+      subtitle:
+        "Kirimkan 1 tautan khotbah Minggu Anda. Biarkan kami membuktikan kualitas video lintas generasi, panduan Komsel, dan ketenangan SOP Senin 09:00 tanpa biaya dan tanpa risiko.",
+      badges: [
+        "✓ 2 Minggu Penuh (2 Khotbah)",
+        "✓ Tanpa Kontrak Mengikat",
+        "✓ 100% Kendali Tim Gereja",
+      ],
+      cta: "Klaim Slot Gereja Anda via DM @suarstudio.co",
+      stamp: "APPROVED · FREE TRIAL",
+    },
+    tiers: [
+      {
+        name: "Sunday Echo",
+        focus: "Fokus: 1 Ibadah (Ibadah Raya) & Komsel Dewasa",
+        features: [
+          "3–6 video pendek vertikal untuk smartphone masing-masing jemaat",
+          "Jumlah klip disesuaikan isi khotbah agar tetap relevan dengan pesan utama",
+          "1x PDF Panduan Diskusi Komsel (A4 Editorial)",
+          "5x Renungan Harian WhatsApp (Senin hingga Jumat)",
+        ],
+      },
+      {
+        name: "NextGen",
+        focus: "Fokus: 2 Ibadah Mingguan (Ibadah Raya & Youth)",
+        features: [
+          "Kliping 2 ibadah setiap minggu: Ibadah Umum & Ibadah Youth",
+          "Total 6–10 klip video vertikal (disesuaikan dengan isi kedua khotbah)",
+          "Subtitle terjemahan dwibahasa (ID & EN) ramah generasi muda",
+          "1x PDF Panduan Diskusi Komsel + 5x Renungan Harian WA",
+        ],
+      },
+      {
+        name: "Full Generations",
+        focus: "Fokus: Ibadah Raya + Youth + Akses Awal Animasi Kids",
+        features: [
+          "Semua fasilitas di paket NextGen (Ibadah Raya & Youth)",
+          "Akses awal: 2x Video Animasi Kisah Alkitab Anak / minggu (Segera Hadir)",
+          "Panduan Obrolan Orang Tua & Anak sebelum tidur",
+          "Akses prioritas pertama fitur otomasi gereja mendatang",
+        ],
+      },
+    ],
+  },
+  faq: {
+    eyebrow: "Tanya Jawab Pelayanan",
+    heading: "Pertanyaan yang *Sering Diajukan*.",
+    items: [
+      {
+        q: "Apakah Suar Studio hanya aplikasi pemotong video otomatis?",
+        a: "Sama sekali tidak. AI kami gunakan untuk mempercepat pekerjaan teknis (pemetaan transkrip presisi, pelacakan pembicara, dan tata letak), namun setiap klip dikurasi secara utuh dan wajib melewati persetujuan tim gereja Anda setiap Senin pukul 09:00 sebelum video digunakan oleh gereja.",
+      },
+      {
+        q: "Apakah AI pernah mengubah atau memparafrasekan isi khotbah pengkhotbah?",
+        a: "Tidak pernah. Kami hanya mengambil kalimat asli khotbah apa adanya, lengkap dengan menit di khotbahnya. Tim gereja Anda memegang kendali penuh atas setiap klip sebelum video digunakan oleh gereja.",
+      },
+      {
+        q: "Apa saja yang perlu disiapkan oleh tim multimedia gereja kami?",
+        a: "Cukup bagikan 1 tautan livestream YouTube (atau rekaman video) setiap selesai ibadah Minggu, serta tunjuk 1 perwakilan tim gereja untuk membalas “OK” pada pesan WhatsApp persetujuan hari Senin pagi.",
+      },
+      {
+        q: "Bagaimana cara memulai Uji Coba Gratis 2 Minggu?",
+        a: "Hubungi kami melalui Instagram DM di @suarstudio.co dan kirimkan tautan YouTube khotbah Minggu terbaru gereja Anda. Kami menyediakan 5 slot Gereja Mitra Pertama tanpa biaya dan tanpa kontrak.",
+      },
+    ],
+  },
+  footer: {
+    tagline: "Studio Pemuridan Digital & Mitra Otomasi Media Gereja.",
+    follow: "Hubungi & ikuti kami di Instagram",
+    rights: "Hak cipta dilindungi.",
+  },
+};
+
+export type Dict = typeof id;
+
+const en: Dict = {
+  meta: {
+    title: "Suar Studio · Human-Stewarded AI Creative & Church Automation Partner",
+  },
+  nav: {
+    links: [
+      "Why Suar",
+      "Monday Rhythm",
+      "Automation Roadmap",
+      "Pricing",
+    ],
+    cta: "2-Week Free Trial",
+    menuLabel: "Menu",
+    openMenu: "Open navigation menu",
+    closeMenu: "Close navigation menu",
+    langLabel: "Choose language",
+  },
+  hero: {
+    eyebrow: "Digital Discipleship Studio · Human-Stewarded, AI-Accelerated",
+    headline:
+      "Sunday’s Pulpit Concludes. Let Its Message *Reach Souls* All Week Long.",
+    sub: "Suar Studio pairs a heart for ministry with precision AI to turn 1 Sunday sermon into ready-to-post daily clips that reach your congregation's hearts through their smartphones every day. Never a generic automated tool that cuts verses out of context: every clip is thoughtfully crafted to spark Small Group conversations and power church automations, 100% under your church's approval.",
+    trustPills: [
+      "Human-Curated + AI Precision",
+      "100% Preacher's Original Words",
+      "Monday 09:00 Church Team Sign-Off",
+    ],
+    ctaPrimary: "Claim 2-Week Free Trial",
+    ctaNote: "Limited to 5 Founding Partner Churches · DM @suarstudio.co",
+    ctaSecondary: "Watch 45s Studio Overview",
+    ctaExplore: "Explore Deliverables",
+    videoModalTitle: "Suar Studio · 45-Second Ministry Partner Overview",
+    videoModalClose: "Close Video",
+  },
+  mockup: {
+    sermon: "1 SERMON MASTER (58:20)",
+    generatedBadge: "DAILY CLIPS + SMALL GROUP PROMPTS",
+    mapping: "Finding the best moments in Sunday's sermon",
+    dragHint: "Swipe or Drag to Explore",
+    prevPhone: "View previous clip",
+    nextPhone: "View next clip",
+    goToPhone: "View clip",
+    speakerLock: "SPEAKER LOCK",
+    frames: ["Sunday Service", "Youth / NextGen", "Kids & Family"],
+    frameSub: ["Reflective Clips", "Dynamic Typography", "Visual Stories"],
+    captions: [
+      "His grace is sufficient",
+      "Don't fear failure, God holds your life!",
+      "God always keeps His promises!",
+    ],
+    youthVerse: "JER 29:11",
+    kidsBadge: "[00:22 · KIDS]",
+    bottomPill: "1 Sermon → Full Week of Discipleship & Ministry Automation",
+    phoneList: [
+      {
+        id: "youth-1",
+        image: "/images/phones/youth_1.jpg",
+        category: "Youth (Pemuda)",
+        badge: "CLIP #1 · RELEVANT",
+        title: "“Don't fear failure, God holds your life in His hands!”",
+        tag: "KINETIC TYPOGRAPHY",
+        sub: "AUTO-TRACK",
+        duration: "00:24",
+      },
+      {
+        id: "sunday-1",
+        image: "/images/phones/sunday_1.jpg",
+        category: "Sunday Service",
+        badge: "CLIP #1 · REFLECTIVE",
+        title: "“My grace is sufficient for you in every season.”",
+        tag: "SPEAKER LOCK",
+        sub: "ORIGINAL SERMON WORDS",
+        duration: "00:54",
+      },
+      {
+        id: "kids-1",
+        image: "/images/phones/kids_1.jpg",
+        category: "Kids & Family",
+        badge: "BIBLE STORY · KIDS #1",
+        title: "“God always keeps His promises to us!”",
+        tag: "AUDIO STORYBOOK",
+        sub: "BIBLE STORY ILLUSTRATION",
+        duration: "00:22",
+      },
+      {
+        id: "sunday-2",
+        image: "/images/phones/sunday_2.jpg",
+        category: "Sunday Service",
+        badge: "CLIP #2 · REFLECTIVE",
+        title: "“Walk in the light of His word every single day.”",
+        tag: "AUTO-SCRIPTURE",
+        sub: "EPHESIANS 2:8",
+        duration: "00:48",
+      },
+      {
+        id: "youth-2",
+        image: "/images/phones/youth_2.jpg",
+        category: "Youth (Pemuda)",
+        badge: "CLIP #2 · INSPIRING",
+        title: "“Your future is not defined by your past.”",
+        tag: "YOUTH HOOK AI",
+        sub: "JEREMIAH 29:11",
+        duration: "00:30",
+      },
+      {
+        id: "kids-2",
+        image: "/images/phones/kids_2.jpg",
+        category: "Kids & Family",
+        badge: "KIDS #2 · FAMILY TALK",
+        title: "“With God, we are brave enough to face anything!”",
+        tag: "FAMILY CONVERSATION",
+        sub: "PARENT & CHILD REFLECTION",
+        duration: "00:28",
+      },
+      {
+        id: "sunday-3",
+        image: "/images/phones/sunday_3.jpg",
+        category: "Sunday Service",
+        badge: "WEEKLY DISCIPLESHIP",
+        title: "Accompanying Your Congregation Monday to Saturday",
+        tag: "MULTI-PLATFORM",
+        sub: "IG & SMALL GROUP WA",
+        duration: "MON 09:00",
+      },
+      {
+        id: "youth-3",
+        image: "/images/phones/youth_3.jpg",
+        category: "Youth (Pemuda)",
+        badge: "YOUTH RETENTION",
+        title: "Reaching Young People Right on Their Screens",
+        tag: "MULTI-PLATFORM",
+        sub: "SOCIALS & YOUTH WA",
+        duration: "MON 09:00",
+      },
+      {
+        id: "kids-3",
+        image: "/images/phones/kids_3.jpg",
+        category: "Kids & Family",
+        badge: "UPCOMING FEATURE",
+        title: "Bring the Sunday School Message Home",
+        tag: "FAMILY CONVERSATION",
+        sub: "STORYBOOK & PARENTS",
+        duration: "ROADMAP",
+      },
+    ],
+  },
+  why: {
+    eyebrow: "Ministry Reality vs. The Suar Standard",
+    heading:
+      "More Than a Video Clipper. *Never Out-of-Context* Cuts.",
+    sub: "Most churches are stuck between two broken options: burning out faithful media volunteers every Monday night, or trusting instant auto-clippers that chop sermons mid-sentence without theological discernment.",
+    comparison: {
+      manual: {
+        tag: "MANUAL VOLUNTEER GRIND",
+        title: "6 to 10+ Hours Every Week",
+        subtitle:
+          "Volunteers exhausted from re-watching 60m sermons, keyframing speakers, and typing captions late into Monday night.",
+        timelineLabel: "MANUAL NLE TIMELINE · MONDAY 11:58 PM",
+        status: "High Burnout Risk",
+      },
+      genericAi: {
+        tag: "INSTANT AUTO-CLIPPERS",
+        title: "Chops Out of Context",
+        subtitle:
+          "Self-serve auto-clippers that cut mid-verse, strip away pastoral heart, and publish rigid captions without oversight.",
+        badQuote: "“For by grace you are...”",
+        badCutBadge: "✂ BROKEN CUT",
+        status: "Theological Risk",
+      },
+      suarStandard: {
+        tag: "THE SUAR STUDIO STANDARD",
+        title: "Human-Stewarded, AI-Accelerated",
+        subtitle:
+          "Precision AI handles speaker tracking and framing, while we curate complete thoughts, ready-to-post captions, and Small Group discussion starters, 100% approved by your church team.",
+        check1: "Complete Original Quotes + Exact Minute",
+        check2: "Monday 09:00 Church Team Sign-Off",
+        status: "Context-Safe & Ready",
+      },
+    },
+    benefits: [
+      {
+        badge: "01 · THEOLOGICAL INTEGRITY",
+        title: "100% Verbatim Words, Never Paraphrased",
+        desc: "We never allow AI to distort doctrine or invent theology. Every clip directly traces to exact sermon minutes with verified scripture references.",
+      },
+      {
+        badge: "02 · MULTI-GEN & DIASPORA BRIDGE",
+        title: "Tailored for Adults, Youth & Diaspora",
+        desc: "Sermon clips delivered in the right aesthetic format: serene and contemplative for adults, kinetic for youth, and natural bilingual subtitles (ID/EN) for diaspora congregations.",
+      },
+      {
+        badge: "03 · CHURCH TEAM IN FULL CONTROL",
+        title: "Monday 09:00 SOP: Simply Reply 'OK'",
+        desc: "Your church keeps final editorial sign-off. Zero complex software or dashboards to learn—simply review and approve your weekly preview via WhatsApp.",
+      },
+    ],
+    ctaButton: "Claim Free 2-Week Trial",
+    ctaNote: "Exclusive to First 5 Founding Churches · DM @suarstudio.co",
+  },
+  sop: {
+    eyebrow: "The Weekly Rhythm & Theological Safety",
+    heading: "AI Speed. *Complete Control* in Your Church Team’s Hands.",
+    sub: "A workflow built so your volunteers never burn out: AI handles the technical work, and no clip is made before your church team says yes.",
+    antiSlopBadge: "100% ORIGINAL SERMON WORDS GUARANTEE",
+    antiSlopText:
+      "We never let AI invent theology or paraphrase your pulpit. Every video clip and Small Group discussion prompt comes 100% from the original words of your Sunday sermon.",
+    steps: [
+      {
+        when: "Sunday Night",
+        title: "YouTube Link Auto-Fetched",
+        body: "Once Sunday service concludes, our system fetches your YouTube livestream link, writes out the sermon, and marks the key moments.",
+        code: "INPUT: 1–2 YOUTUBE LINKS",
+      },
+      {
+        when: "Monday 09:00 AM",
+        title: "WhatsApp Sign-Off",
+        body: "Before any video is used by your church on social media or in Small Groups, we send clip previews and verified quotes to your church team on WhatsApp for sign-off.",
+        code: "[24:15 - 25:10]",
+      },
+      {
+        when: "Tuesday Morning",
+        title: "Approved Clips Ready to Post",
+        body: "Once reviewed and approved by your church team, finished vertical clips, captions, and Small Group starters are ready for distribution.",
+        code: "READY FOR CHURCH USE",
+      },
+    ],
+  },
+  demo: {
+    eyebrow: "Interactive Monday 09:00 Simulator",
+    heading: "Your Church Team Has *the Final Word*.",
+    sub: "See how simple Monday morning approval is. Tap “Send OK” below just like your church team would on WhatsApp.",
+    chatName: "Suar Studio · Pre-Flight SOP",
+    online: "online · Monday 09:00 AM",
+    sample: "Interactive Simulation",
+    greeting:
+      "Good morning, Church Team. Here are the 3 exact quotes from yesterday's sermon for your sign-off before production begins:",
+    quotes: [
+      {
+        code: "[24:15 - 25:10] · Adult Service",
+        text: "“His grace is sufficient for us, not because we are strong, but because He is faithful.”",
+      },
+      {
+        code: "[31:02 - 31:48] · Youth (Pemuda)",
+        text: "“Our weakness is the exact place where Christ’s power is made perfect.”",
+      },
+      {
+        code: "[38:40 - 39:22] · Small Group & Sending",
+        text: "“This week, bring your heaviest burden to Him in united prayer.”",
+      },
+    ],
+    prompt: "Reply OK to begin this week's production.",
+    sendOk: "Tap to Send “OK” (Simulate Church Team)",
+    pastorReply: "OK, proceed with production.",
+    typing: "Suar Studio team is processing...",
+    approvedMsg:
+      "Thank you, Church Team. Approved ✓ Studio production pipeline has started:",
+    renderItems: [
+      "Adult & Youth 9:16 vertical videos",
+      "Ready-to-post captions & verified subtitles",
+      "Small Group discussion starters & WA prompts",
+    ],
+    ready: "✓ Scheduled for Tuesday 09:00 AM delivery",
+    replay: "Replay Approval Simulation",
+  },
+  eco: {
+    eyebrow: "1 Sermon → Full Week Discipleship Ecosystem",
+    heading: "One YouTube Link. *One Multi-Generational* Ecosystem.",
+    sub: "Every generation receives the same Sunday message, crafted in the visual language, tone, and format that speaks to their heart from Monday through Friday.",
+    deliverableCount: "Daily Clips + Small Group Prompts Every Week",
+    tabs: [
+      {
+        label: "Adult Service",
+        mood: "Calm, Warm & Editorial",
+        countTag: "Active Now · 3–6 Vertical Clips / Week",
+        body: "9:16 vertical framing formatted for congregation smartphone viewing, camera follows the preacher, warm typography, and clip count (3–6) dynamically paced to stay true to the sermon core.",
+        specs: ["9:16 Vertical HD", "Camera Follows the Speaker", "ID / EN Subtitles"],
+      },
+      {
+        label: "Youth (Pemuda)",
+        mood: "Dynamic, Bold & Kinetic",
+        countTag: "Active Now · Dedicated Youth Service (3–5 Clips / Week)",
+        body: "Dedicated youth service clipping curated for younger generations, bold kinetic typography highlights, and natural bilingual subtitles for urban and diaspora youth.",
+        specs: [
+          "High-Retention Hooks",
+          "Kinetic Typography",
+          "Natural Bilingual Subtitles",
+        ],
+      },
+      {
+        label: "Kids & Family",
+        mood: "Illustrative, Bible Story & Family Prompts",
+        countTag: "Coming Soon · 2x Animated Bible Stories / Week",
+        body: "In active development: 2 short weekly animated Bible story videos aligned with Sunday school themes, paired with warm bedtime discussion prompts for parents at home.",
+        specs: [
+          "2x Kids Story Animations (Roadmap)",
+          "Parent & Child Prompts",
+          "Mobile-Ready Format",
+        ],
+      },
+      {
+        label: "Small Group / Komsel",
+        mood: "Small Group Ecosystem & Daily Devotionals",
+        countTag: "Active Now · A4 PDF Discussion Guide + 5x WA Devotionals",
+        body: "Clean A4 editorial PDF discussion guide to lead meaningful cell-group discussions, plus 5 daily WhatsApp devotionals (Monday to Friday) to deepen Sunday's word.",
+        specs: [
+          "Print/Mobile A4 PDF",
+          "Focused Discussion Prompts",
+          "5x Daily WA Devotionals",
+        ],
+      },
+    ],
+  },
+  roadmap: {
+    eyebrow: "Near-Future Roadmap · In Active Development",
+    heading: "Serving Your Church *Far Beyond* Video Clipping.",
+    sub: "Our focus today is weekly sermon clips and Small Group guides. The four automations below are in development, and Founding Partner Churches get access first.",
+    statusPill: "IN DEVELOPMENT",
+    items: [
+      {
+        badge: "SMART ARCHIVE",
+        title: "Sermon Archive WhatsApp Assistant (RAG)",
+      },
+      {
+        badge: "PASTORAL CARE",
+        title: "Warm Newcomer & Care-Cell Follow-Up",
+      },
+      {
+        badge: "CHURCH COMMS",
+        title: "Weekly Church Announcements & Multilingual Hub",
+      },
+      {
+        badge: "PUBLISHING",
+        title: "Sermon Series to Devotional Book Compilation",
+      },
+    ],
+  },
+  pricing: {
+    eyebrow: "Monthly Ministry Investment",
+    heading: "*Transparent* & Predictable Investment.",
+    sub: "A fraction of the cost of hiring a full-time media editor, with zero long-term contracts. Automatically formatted for your region.",
+    perMonth: "/ mo",
+    popular: "Most Popular for Churches & Diaspora",
+    discountBadge: "Founding Partner Rate",
+    cta: "Claim 2-Week Free Trial",
+    note: "Flat monthly retainer with no annual lock-in. Cancel anytime.",
+    voucher: {
+      passNumber: "TRIAL PASS #0001 · LIMITED TO 5 FOUNDING PARTNER CHURCHES",
+      title: "Full-Ecosystem Trial: 2 Weeks Completely Free",
+      subtitle:
+        "Send us 1 Sunday sermon YouTube link. Experience our multi-generational vertical reels, Small Group PDF guide, and the peace of mind of our Monday 09:00 Approval SOP at zero cost and zero risk.",
+      badges: [
+        "✓ 2 Full Weeks (2 Sermons)",
+        "✓ No Long-Term Contract",
+        "✓ 100% Church Team Control",
+      ],
+      cta: "Claim Your Church's Spot via DM @suarstudio.co",
+      stamp: "APPROVED · FREE TRIAL",
+    },
+    tiers: [
+      {
+        name: "Sunday Echo",
+        focus: "Focus: 1 Service (Adult Service) & Adult Small Groups",
+        features: [
+          "3–6 short vertical clips tailored for congregation mobile viewing",
+          "Clip count adapts to sermon content to ensure message relevance",
+          "1x Small Group Discussion PDF (A4 Editorial)",
+          "5x Daily WhatsApp Devotionals (Monday to Friday)",
+        ],
+      },
+      {
+        name: "NextGen",
+        focus: "Focus: 2 Weekly Services (Adult & Youth)",
+        features: [
+          "Clipping for 2 services every week: Adult Service & Youth Service",
+          "Total 6–10 vertical clips (paced to both sermons' substance)",
+          "Bilingual translation subtitles (ID & EN) for NextGen & diaspora",
+          "1x Small Group Discussion PDF + 5x Daily WhatsApp Devotionals",
+        ],
+      },
+      {
+        name: "Full Generations",
+        focus: "Focus: Adult + Youth + Early Access Kids Animation",
+        features: [
+          "Everything in NextGen (Adult & Youth Services)",
+          "Early access: 2x Animated Bible Story Videos / week (Coming Soon)",
+          "Parent & Child Bedtime Conversation Guide",
+          "First priority access to upcoming church automation features",
+        ],
+      },
+    ],
+  },
+  faq: {
+    eyebrow: "Frequently Asked Questions",
+    heading: "Questions From *Pastors & Media Leads*.",
+    items: [
+      {
+        q: "Is Suar Studio just an instant automated video clipper?",
+        a: "Never. We use precision AI behind the scenes to accelerate technical work (writing out the sermon, following the speaker on camera, and layout), while our ministry-minded team curates complete thoughts and your church team approves every clip on Monday at 09:00 AM before any video is used by your church.",
+      },
+      {
+        q: "Does the AI ever change or paraphrase the preacher's message?",
+        a: "No. We only use the preacher's original words, each with the minute it was said, and no video is posted or used before your church team's approval through the Monday 09:00 SOP.",
+      },
+      {
+        q: "What does our church media team need to prepare each week?",
+        a: "Simply share 1 YouTube livestream link (or video recording) after Sunday service, and designate 1 church team representative to reply “OK” to the Monday morning WhatsApp approval message.",
+      },
+      {
+        q: "How do we start the 2-Week Free Trial?",
+        a: "Message us on Instagram DM at @suarstudio.co and send a link to your church's latest Sunday sermon on YouTube. We are opening 5 Founding Partner Church spots with zero cost and no contract.",
+      },
+    ],
+  },
+  footer: {
+    tagline: "Digital Discipleship Studio & Church Media Automation Partner.",
+    follow: "Connect & follow us on Instagram",
+    rights: "All rights reserved.",
+  },
+};
+
+export const dictionaries: Record<"id" | "en", Dict> = { id, en };
+export type Lang = keyof typeof dictionaries;
