@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 import { useLang } from "../i18n/LangContext";
-import { CTA_URL, type TierKey } from "../config";
+import { CTA_URL, WHATSAPP_URL, type TierKey } from "../config";
 import { useGeoPricing } from "../hooks/useGeoPricing";
 import { Section, SectionEyebrow } from "./ui/Section";
 import { Rich } from "./ui/Rich";
@@ -100,7 +100,7 @@ export default function Pricing() {
                   variant={isPopular ? "primary" : "secondary"}
                   className="w-full"
                 >
-                  {t.pricing.cta}
+                  {tier.cta || t.pricing.cta}
                 </LinkButton>
               </div>
             </div>
@@ -162,16 +162,16 @@ export default function Pricing() {
           {/* Right Perforated Stub CTA */}
           <div className="w-full lg:w-auto lg:pl-8 lg:border-l-2 lg:border-dashed lg:border-sand-border flex flex-col items-stretch sm:items-center gap-2.5 shrink-0">
             <LinkButton
-              href={CTA_URL || "#"}
-              target={CTA_URL ? "_blank" : undefined}
-              rel={CTA_URL ? "noopener noreferrer" : undefined}
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               variant="primary"
-              className="px-7 py-4 text-base"
+              className="px-7 py-4 text-base shadow-sm"
             >
               <span>{voucher.cta}</span>
             </LinkButton>
             <span className="font-mono text-xs text-slate text-center">
-              Instagram DM · @suarstudio.co
+              {voucher.subtext}
             </span>
           </div>
         </div>

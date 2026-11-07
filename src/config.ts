@@ -4,8 +4,12 @@ export const INSTAGRAM_HANDLE = "suarstudio.co";
 export const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;
 export const INSTAGRAM_DM_URL = `https://ig.me/m/${INSTAGRAM_HANDLE}`;
 
-/** Trial / CTA destination. Points to Instagram DM @suarstudio.co */
-export const CTA_URL = INSTAGRAM_DM_URL;
+/** WhatsApp contact link with pre-filled greeting */
+export const WHATSAPP_URL =
+  "https://wa.me/?text=Shalom%20Suar%20Studio,%20kami%20ingin%20mengklaim%20Uji%20Coba%20Gratis%202%20Minggu%20untuk%20gereja%20kami.";
+
+/** Trial / CTA destination. Points to WhatsApp by default */
+export const CTA_URL = WHATSAPP_URL;
 
 export type TierKey = "echo" | "nextgen" | "family";
 export type GeoRegion = "ID" | "AU" | "CA" | "GLOBAL";

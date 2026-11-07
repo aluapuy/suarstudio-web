@@ -295,9 +295,9 @@ const id = {
       {
         label: "Komsel / COOL",
         mood: "Ekosistem Kelompok Kecil & Renungan Harian",
-        countTag: "Aktif · Panduan Diskusi PDF A4 + 5x Renungan WA",
-        body: "Panduan diskusi PDF A4 bergaya editorial yang rapi untuk memandu obrolan kelompok kecil, serta 5 renungan harian WhatsApp (Senin hingga Jumat) untuk memperdalam firman.",
-        specs: ["PDF A4 Siap Cetak/HP", "Pertanyaan Diskusi Terarah", "5x Renungan Harian WA"],
+        countTag: "Aktif · Caption Siap Unggah + Pemantik Komsel WA",
+        body: "Caption media sosial siap unggah dan pemantik obrolan Komsel WhatsApp yang membumi, serta 5 renungan harian WhatsApp (Senin hingga Jumat) untuk memperdalam firman.",
+        specs: ["Caption Medsos Siap Unggah", "Pemantik Komsel WhatsApp", "5x Renungan Harian WA"],
       },
     ],
   },
@@ -309,7 +309,7 @@ const id = {
     items: [
       {
         badge: "ARSIP PINTAR",
-        title: "Pencarian Arsip Khotbah via WhatsApp (RAG)",
+        title: "Pencarian Arsip Khotbah via WhatsApp",
       },
       {
         badge: "PENGGEMBALAAN",
@@ -328,7 +328,7 @@ const id = {
   pricing: {
     eyebrow: "Investasi Pelayanan Bulanan",
     heading: "Investasi yang *Transparan* & Terukur.",
-    sub: "Lebih hemat dibandingkan merekrut editor penuh waktu, tanpa kontrak jangka panjang yang mengikat. Disesuaikan otomatis dengan mata uang wilayah Anda.",
+    sub: "Lebih hemat dibandingkan merekrut editor penuh waktu, tanpa kontrak jangka panjang yang mengikat.",
     perMonth: "/ bln",
     popular: "Pilihan Utama Gereja & Diaspora",
     discountBadge: "Tarif Khusus Perintis",
@@ -338,39 +338,43 @@ const id = {
       passNumber: "TRIAL PASS #0001 · KHUSUS 5 GEREJA MITRA PERTAMA",
       title: "Uji Coba Ekosistem Penuh: 2 Minggu Gratis",
       subtitle:
-        "Kirimkan 1 tautan khotbah Minggu Anda. Biarkan kami membuktikan kualitas video lintas generasi, panduan Komsel, dan ketenangan SOP Senin 09:00 tanpa biaya dan tanpa risiko.",
+        "Kirimkan 1 tautan khotbah Minggu Anda. Biarkan kami membuktikan kualitas video lintas generasi, caption siap unggah & pemantik Komsel WhatsApp, dan ketenangan SOP Senin 09:00 tanpa biaya dan tanpa risiko.",
       badges: [
         "✓ 2 Minggu Penuh (2 Khotbah)",
         "✓ Tanpa Kontrak Mengikat",
         "✓ 100% Kendali Tim Gereja",
       ],
-      cta: "Klaim Slot Gereja Anda via DM @suarstudio.co",
+      cta: "Klaim Slot Gereja Anda via WhatsApp",
+      subtext: "Respon cepat via WhatsApp · Atau DM Instagram @suarstudio.co",
       stamp: "APPROVED · FREE TRIAL",
     },
     tiers: [
       {
         name: "Sunday Echo",
         focus: "Fokus: 1 Ibadah (Ibadah Raya) & Komsel Dewasa",
+        cta: "Pilih Sunday Echo (Gratis 2 Minggu)",
         features: [
           "3–6 video pendek vertikal untuk smartphone masing-masing jemaat",
           "Jumlah klip disesuaikan isi khotbah agar tetap relevan dengan pesan utama",
-          "1x PDF Panduan Diskusi Komsel (A4 Editorial)",
+          "Caption Medsos Siap Unggah + Pemantik Obrolan Komsel WhatsApp",
           "5x Renungan Harian WhatsApp (Senin hingga Jumat)",
         ],
       },
       {
         name: "NextGen",
         focus: "Fokus: 2 Ibadah Mingguan (Ibadah Raya & Youth)",
+        cta: "Pilih NextGen (Gratis 2 Minggu)",
         features: [
           "Kliping 2 ibadah setiap minggu: Ibadah Umum & Ibadah Youth",
           "Total 6–10 klip video vertikal (disesuaikan dengan isi kedua khotbah)",
           "Subtitle terjemahan dwibahasa (ID & EN) ramah generasi muda",
-          "1x PDF Panduan Diskusi Komsel + 5x Renungan Harian WA",
+          "Caption Medsos Siap Unggah + Pemantik Komsel WA + 5x Renungan WA",
         ],
       },
       {
         name: "Full Generations",
         focus: "Fokus: Ibadah Raya + Youth + Akses Awal Animasi Kids",
+        cta: "Gabung Waitlist Full Generations",
         features: [
           "Semua fasilitas di paket NextGen (Ibadah Raya & Youth)",
           "Akses awal: 2x Video Animasi Kisah Alkitab Anak / minggu (Segera Hadir)",
@@ -713,11 +717,11 @@ const en: Dict = {
       {
         label: "Small Group / Komsel",
         mood: "Small Group Ecosystem & Daily Devotionals",
-        countTag: "Active Now · A4 PDF Discussion Guide + 5x WA Devotionals",
-        body: "Clean A4 editorial PDF discussion guide to lead meaningful cell-group discussions, plus 5 daily WhatsApp devotionals (Monday to Friday) to deepen Sunday's word.",
+        countTag: "Active Now · Ready-to-Share Captions + WhatsApp Prompts",
+        body: "Ready-to-share social captions and WhatsApp Small Group discussion prompts to spark meaningful conversation, plus 5 daily WhatsApp devotionals (Monday to Friday) to deepen Sunday's message.",
         specs: [
-          "Print/Mobile A4 PDF",
-          "Focused Discussion Prompts",
+          "Ready-to-Share Social Captions",
+          "WhatsApp Small Group Prompts",
           "5x Daily WA Devotionals",
         ],
       },
@@ -731,7 +735,7 @@ const en: Dict = {
     items: [
       {
         badge: "SMART ARCHIVE",
-        title: "Sermon Archive WhatsApp Assistant (RAG)",
+        title: "Sermon Archive WhatsApp Assistant",
       },
       {
         badge: "PASTORAL CARE",
@@ -750,7 +754,7 @@ const en: Dict = {
   pricing: {
     eyebrow: "Monthly Ministry Investment",
     heading: "*Transparent* & Predictable Investment.",
-    sub: "A fraction of the cost of hiring a full-time media editor, with zero long-term contracts. Automatically formatted for your region.",
+    sub: "A fraction of the cost of hiring a full-time media editor, with zero long-term contracts.",
     perMonth: "/ mo",
     popular: "Most Popular for Churches & Diaspora",
     discountBadge: "Founding Partner Rate",
@@ -760,39 +764,43 @@ const en: Dict = {
       passNumber: "TRIAL PASS #0001 · LIMITED TO 5 FOUNDING PARTNER CHURCHES",
       title: "Full-Ecosystem Trial: 2 Weeks Completely Free",
       subtitle:
-        "Send us 1 Sunday sermon YouTube link. Experience our multi-generational vertical reels, Small Group PDF guide, and the peace of mind of our Monday 09:00 Approval SOP at zero cost and zero risk.",
+        "Send us 1 Sunday sermon YouTube link. Experience our multi-generational vertical reels, ready-to-share social captions, WhatsApp Small Group discussion prompts, and the peace of mind of our Monday 09:00 Approval SOP at zero cost and zero risk.",
       badges: [
         "✓ 2 Full Weeks (2 Sermons)",
         "✓ No Long-Term Contract",
         "✓ 100% Church Team Control",
       ],
-      cta: "Claim Your Church's Spot via DM @suarstudio.co",
+      cta: "Claim Your Church's Spot via WhatsApp",
+      subtext: "Fast response via WhatsApp · Or DM us on Instagram @suarstudio.co",
       stamp: "APPROVED · FREE TRIAL",
     },
     tiers: [
       {
         name: "Sunday Echo",
         focus: "Focus: 1 Service (Adult Service) & Adult Small Groups",
+        cta: "Select Sunday Echo (2 Weeks Free)",
         features: [
           "3–6 short vertical clips tailored for congregation mobile viewing",
           "Clip count adapts to sermon content to ensure message relevance",
-          "1x Small Group Discussion PDF (A4 Editorial)",
+          "Ready-to-Share Social Captions + WhatsApp Small Group Discussion Prompts",
           "5x Daily WhatsApp Devotionals (Monday to Friday)",
         ],
       },
       {
         name: "NextGen",
         focus: "Focus: 2 Weekly Services (Adult & Youth)",
+        cta: "Select NextGen (2 Weeks Free)",
         features: [
           "Clipping for 2 services every week: Adult Service & Youth Service",
           "Total 6–10 vertical clips (paced to both sermons' substance)",
           "Bilingual translation subtitles (ID & EN) for NextGen & diaspora",
-          "1x Small Group Discussion PDF + 5x Daily WhatsApp Devotionals",
+          "Ready-to-Share Social Captions + WhatsApp Small Group Prompts + 5x Daily WA Devotionals",
         ],
       },
       {
         name: "Full Generations",
         focus: "Focus: Adult + Youth + Early Access Kids Animation",
+        cta: "Join Full Generations Waitlist",
         features: [
           "Everything in NextGen (Adult & Youth Services)",
           "Early access: 2x Animated Bible Story Videos / week (Coming Soon)",

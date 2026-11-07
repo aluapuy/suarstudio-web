@@ -9,8 +9,6 @@ import { useLang } from "../i18n/LangContext";
 import { Section, SectionEyebrow } from "./ui/Section";
 import { Rich } from "./ui/Rich";
 import { Badge } from "./ui/Badge";
-import { LinkButton } from "./ui/Button";
-import { CTA_URL } from "../config";
 
 const cardVariants = {
   hidden: { opacity: 0.95, y: 10 },
@@ -184,41 +182,22 @@ export default function PainPoints() {
         </motion.div>
       </div>
 
-      {/* ── Bottom: 3 Editorial Benefit Columns ── */}
-      <div className="grid md:grid-cols-3 gap-6 mt-10">
+      {/* ── Bottom: 3 Editorial Feature Columns (Clean & Borderless) ── */}
+      <div className="grid md:grid-cols-3 gap-8 sm:gap-10 mt-12 pt-10 border-t border-sand-border/70">
         {t.why.benefits.map((b, idx) => (
-          <div
-            key={idx}
-            className="rounded-3xl bg-white border border-sand-border p-6 sm:p-7 flex flex-col justify-between shadow-sm"
-          >
-            <div>
-              <span className="font-mono text-xs font-bold text-terracotta tracking-wider uppercase mb-3 block">
-                {b.badge}
-              </span>
-              <h4 className="font-sans text-xl font-bold text-charcoal mb-2.5">
-                {b.title}
-              </h4>
-              <p className="text-sm text-slate leading-relaxed">
-                {b.desc}
-              </p>
-            </div>
+          <div key={idx} className="flex flex-col">
+            <span className="inline-flex items-center gap-2 font-mono text-xs font-bold text-terracotta tracking-wider uppercase mb-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-terracotta shrink-0" aria-hidden="true" />
+              {b.badge}
+            </span>
+            <h4 className="font-serif text-xl sm:text-2xl font-bold text-charcoal mb-2 leading-snug">
+              {b.title}
+            </h4>
+            <p className="text-sm text-slate leading-relaxed">
+              {b.desc}
+            </p>
           </div>
         ))}
-      </div>
-
-      {/* ── Bottom Section CTA ── */}
-      <div className="mt-12 flex flex-col items-center justify-center text-center gap-2">
-        <LinkButton
-          href={CTA_URL || "#investasi"}
-          target={CTA_URL ? "_blank" : undefined}
-          rel={CTA_URL ? "noopener noreferrer" : undefined}
-          className="shadow-md text-base px-8 py-3.5"
-        >
-          {t.why.ctaButton}
-        </LinkButton>
-        <span className="text-xs text-slate font-mono">
-          {t.why.ctaNote}
-        </span>
       </div>
     </Section>
   );
