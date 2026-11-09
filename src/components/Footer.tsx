@@ -1,5 +1,5 @@
 import { useLang } from "../i18n/LangContext";
-import { INSTAGRAM_URL, INSTAGRAM_HANDLE } from "../config";
+import { INSTAGRAM_URL, INSTAGRAM_HANDLE, WHATSAPP_URL } from "../config";
 import { Emblem } from "./Emblem";
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -18,16 +18,30 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 text-sm text-white/80">
-          <span>{t.footer.follow}:</span>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono font-semibold text-brass hover:underline min-h-11 inline-flex items-center px-1"
-          >
-            @{INSTAGRAM_HANDLE}
-          </a>
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-sm text-white/80">
+          <div className="flex items-center gap-2">
+            <span>WhatsApp:</span>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono font-semibold text-brass hover:underline min-h-11 inline-flex items-center px-1"
+            >
+              +62 819-4959-0814
+            </a>
+          </div>
+          <span className="text-white/30 hidden sm:inline">•</span>
+          <div className="flex items-center gap-2">
+            <span>{t.footer.follow}:</span>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono font-semibold text-brass hover:underline min-h-11 inline-flex items-center px-1"
+            >
+              @{INSTAGRAM_HANDLE}
+            </a>
+          </div>
         </div>
       </div>
 

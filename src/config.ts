@@ -4,11 +4,23 @@ export const INSTAGRAM_HANDLE = "suarstudio.co";
 export const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;
 export const INSTAGRAM_DM_URL = `https://ig.me/m/${INSTAGRAM_HANDLE}`;
 
-/** WhatsApp contact link with pre-filled greeting */
-export const WHATSAPP_URL =
-  "https://wa.me/?text=Shalom%20Suar%20Studio,%20kami%20ingin%20mengklaim%20Uji%20Coba%20Gratis%202%20Minggu%20untuk%20gereja%20kami.";
+/** Official Suar Studio WhatsApp Phone Number (+62 819-4959-0814) */
+export const WHATSAPP_PHONE = "6281949590814";
 
-/** Trial / CTA destination. Points to WhatsApp by default */
+/** Generates direct WhatsApp chat URL with clean encoded pre-filled text */
+export function getWhatsAppUrl(text?: string, lang: "id" | "en" = "id") {
+  const defaultText =
+    lang === "en"
+      ? "Hi Suar Studio, I'd like to claim the 2-Week Free Trial."
+      : "Halo Suar Studio, saya mau klaim Uji Coba Gratis 2 Minggu.";
+  const message = encodeURIComponent(text || defaultText);
+  return `https://wa.me/${WHATSAPP_PHONE}?text=${message}`;
+}
+
+/** Default WhatsApp link */
+export const WHATSAPP_URL = getWhatsAppUrl();
+
+/** Trial / CTA destination. Points directly to Suar Studio's WhatsApp */
 export const CTA_URL = WHATSAPP_URL;
 
 export type TierKey = "echo" | "nextgen" | "family";

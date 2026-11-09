@@ -403,7 +403,7 @@ const id = {
       },
       {
         q: "Bagaimana cara memulai Uji Coba Gratis 2 Minggu?",
-        a: "Hubungi kami melalui Instagram DM di @suarstudio.co dan kirimkan tautan YouTube khotbah Minggu terbaru gereja Anda. Kami menyediakan 5 slot Gereja Mitra Pertama tanpa biaya dan tanpa kontrak.",
+        a: "Klik tombol 'Klaim Uji Coba Gratis 2 Minggu' untuk langsung terhubung ke WhatsApp kami (+62 819-4959-0814) atau hubungi melalui Instagram DM di @suarstudio.co. Cukup kirimkan 1 tautan YouTube khotbah Minggu terbaru gereja Anda. Kami menyediakan 5 slot Gereja Mitra Pertama tanpa biaya dan tanpa kontrak.",
       },
     ],
   },
@@ -830,7 +830,7 @@ const en: Dict = {
       },
       {
         q: "How do we start the 2-Week Free Trial?",
-        a: "Message us on Instagram DM at @suarstudio.co and send a link to your church's latest Sunday sermon on YouTube. We are opening 5 Founding Partner Church spots with zero cost and no contract.",
+        a: "Click 'Claim 2-Week Free Trial' to chat directly with us on WhatsApp (+62 819-4959-0814) or message us on Instagram DM at @suarstudio.co. Simply send 1 YouTube link of your church's latest Sunday sermon. We are opening 5 Founding Partner Church spots with zero cost and no contract.",
       },
     ],
   },

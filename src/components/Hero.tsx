@@ -6,11 +6,11 @@ import { LinkButton, Button } from "./ui/Button";
 import { Rich } from "./ui/Rich";
 import { Section } from "./ui/Section";
 import { Emblem } from "./Emblem";
-import { CTA_URL } from "../config";
+import { getWhatsAppUrl } from "../config";
 import HeroMockup from "./HeroMockup";
 
 export default function Hero() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [videoOpen, setVideoOpen] = useState(false);
 
   // Close modal on Escape key
@@ -69,9 +69,9 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3.5 pt-2">
             <div className="flex flex-col items-stretch sm:items-start gap-1.5">
               <LinkButton
-                href={CTA_URL || "#investasi"}
-                target={CTA_URL ? "_blank" : undefined}
-                rel={CTA_URL ? "noopener noreferrer" : undefined}
+                href={getWhatsAppUrl(undefined, lang)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="shadow-sm"
               >
                 {t.hero.ctaPrimary}

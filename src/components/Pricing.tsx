@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 import { useLang } from "../i18n/LangContext";
-import { CTA_URL, WHATSAPP_URL, type TierKey } from "../config";
+import { getWhatsAppUrl, type TierKey } from "../config";
 import { useGeoPricing } from "../hooks/useGeoPricing";
 import { Section, SectionEyebrow } from "./ui/Section";
 import { Rich } from "./ui/Rich";
@@ -9,7 +9,7 @@ import { LinkButton } from "./ui/Button";
 const KEYS: TierKey[] = ["echo", "nextgen", "family"];
 
 export default function Pricing() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const voucher = t.pricing.voucher;
   const { pricing, region, setRegion } = useGeoPricing();
 
@@ -123,9 +123,14 @@ export default function Pricing() {
 
               <div className="mt-8 pt-2">
                 <LinkButton
-                  href={CTA_URL || "#"}
-                  target={CTA_URL ? "_blank" : undefined}
-                  rel={CTA_URL ? "noopener noreferrer" : undefined}
+                  href={getWhatsAppUrl(
+                    lang === "en"
+                      ? `Hi Suar Studio, I'd like to claim the 2-Week Free Trial for ${tier.name}.`
+                      : `Halo Suar Studio, saya mau klaim Uji Coba Gratis 2 Minggu untuk paket ${tier.name}.`,
+                    lang
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variant={isPopular ? "primary" : "secondary"}
                   className="w-full"
                 >
@@ -191,7 +196,12 @@ export default function Pricing() {
           {/* Right Perforated Stub CTA */}
           <div className="w-full lg:w-auto lg:pl-8 lg:border-l-2 lg:border-dashed lg:border-sand-border flex flex-col items-stretch sm:items-center gap-2.5 shrink-0">
             <LinkButton
-              href={WHATSAPP_URL}
+              href={getWhatsAppUrl(
+                lang === "en"
+                  ? "Hi Suar Studio, I'd like to claim the 2-Week Free Trial Voucher Pass (#0001)."
+                  : "Halo Suar Studio, saya mau klaim Voucher Tiket Uji Coba Gratis 2 Minggu (#0001).",
+                lang
+              )}
               target="_blank"
               rel="noopener noreferrer"
               variant="primary"
