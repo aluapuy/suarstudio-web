@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import PainPoints from "./components/PainPoints";
 import SopTimeline from "./components/SopTimeline";
-import EcosystemTabs from "./components/EcosystemTabs";
 import Roadmap from "./components/Roadmap";
 import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
@@ -16,7 +15,6 @@ export default function App() {
         <Hero />
         <PainPoints />
         <SopTimeline />
-        <EcosystemTabs />
         <Roadmap />
         <Pricing />
         <Faq />
