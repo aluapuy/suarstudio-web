@@ -7,10 +7,10 @@ import {
   type TierKey,
 } from "../config";
 
-const CACHE_KEY = "suar_geo_region";
+const MANUAL_STORAGE_KEY = "suar_manual_currency";
 
 export function useGeoPricing() {
-  const [region, setRegion] = useState<GeoRegion>(() => {
+  const [region, setRegionState] = useState<GeoRegion>(() => {
     if (typeof window !== "undefined") {
       // 1. URL parameter override for instant testing (?geo=AU or ?country=CA)
       const params = new URLSearchParams(window.location.search);
@@ -19,19 +19,20 @@ export function useGeoPricing() {
         return getGeoRegion(queryOverride);
       }
 
-      // 2. Session cache so we don't spam /api/geo on page navigation
+      // 2. User's manual preference if they previously clicked a toggle
       try {
-        const cached = sessionStorage.getItem(CACHE_KEY) as GeoRegion | null;
+        const stored = localStorage.getItem(MANUAL_STORAGE_KEY) as GeoRegion | null;
         if (
-          cached === "ID" ||
-          cached === "AU" ||
-          cached === "CA" ||
-          cached === "GLOBAL"
+          stored &&
+          (stored === "ID" ||
+            stored === "AU" ||
+            stored === "CA" ||
+            stored === "GLOBAL")
         ) {
-          return cached;
+          return stored;
         }
       } catch {
-        // Ignore session storage errors (e.g. private browsing restrictions)
+        // ignore
       }
     }
     return "ID";
@@ -44,14 +45,15 @@ export function useGeoPricing() {
     const params = new URLSearchParams(window.location.search);
     if (params.get("geo") || params.get("country")) return;
 
-    // Skip network request if region is already cached in current session
+    // Skip network request if user already explicitly clicked a currency tab
     try {
-      if (sessionStorage.getItem(CACHE_KEY)) return;
+      if (localStorage.getItem(MANUAL_STORAGE_KEY)) return;
     } catch {
-      // continue
+      // ignore
     }
 
-    fetch("/api/geo")
+    // Always fetch fresh geo location without browser cache
+    fetch("/api/geo", { cache: "no-store" })
       .then((res) => {
         if (!res.ok) throw new Error("Geo API error");
         return res.json();
@@ -59,22 +61,26 @@ export function useGeoPricing() {
       .then((data) => {
         if (data?.country) {
           const resolved = getGeoRegion(data.country);
-          setRegion(resolved);
-          try {
-            sessionStorage.setItem(CACHE_KEY, resolved);
-          } catch {
-            // ignore
-          }
+          setRegionState(resolved);
         }
       })
       .catch(() => {
-        // Graceful fallback to ID default on offline or network block
-        setRegion("ID");
+        setRegionState("ID");
       });
   }, []);
 
+  const setRegion = (newRegion: GeoRegion) => {
+    setRegionState(newRegion);
+    try {
+      localStorage.setItem(MANUAL_STORAGE_KEY, newRegion);
+    } catch {
+      // ignore
+    }
+  };
+
   return {
     region,
+    setRegion,
     pricing: GEO_PRICING[region] as Record<TierKey, TierPrice>,
   };
 }
