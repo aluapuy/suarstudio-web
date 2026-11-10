@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 import { useLang } from "../i18n/LangContext";
-import { getWhatsAppUrl, type TierKey } from "../config";
+import { getWhatsAppUrl, type TierKey, type GeoRegion } from "../config";
 import { useGeoPricing } from "../hooks/useGeoPricing";
 import { Section, SectionEyebrow } from "./ui/Section";
 import { Rich } from "./ui/Rich";
@@ -8,10 +8,19 @@ import { LinkButton } from "./ui/Button";
 
 const KEYS: TierKey[] = ["echo", "nextgen", "family"];
 
+const ALL_TABS: { key: GeoRegion; label: string }[] = [
+  { key: "ID", label: "🇮🇩 Indonesia (IDR)" },
+  { key: "AU", label: "🇦🇺 Australia (AUD)" },
+  { key: "GLOBAL", label: "🌏 Diaspora / Global (USD)" },
+  { key: "CA", label: "🇨🇦 Canada (CAD)" },
+];
+
 export default function Pricing() {
   const { t, lang } = useLang();
   const voucher = t.pricing.voucher;
-  const { pricing, region, setRegion } = useGeoPricing();
+  const { pricing, region, setRegion, allowedRegions } = useGeoPricing();
+
+  const availableTabs = ALL_TABS.filter((tab) => allowedRegions.includes(tab.key));
 
   return (
     <Section id="investasi" className="border-t border-sand-border/60">
@@ -23,34 +32,31 @@ export default function Pricing() {
         {t.pricing.sub}
       </p>
 
-      {/* ── Region / Currency Switcher ── */}
-      <div className="mt-8 flex flex-wrap items-center gap-2">
-        <span className="font-mono text-xs font-semibold text-slate mr-1">
-          {t.pricing.currencySelectorLabel}
-        </span>
-        {[
-          { key: "ID" as const, label: "🇮🇩 Indonesia (IDR)" },
-          { key: "AU" as const, label: "🇦🇺 Australia (AUD)" },
-          { key: "GLOBAL" as const, label: "🌏 Diaspora / Global (USD)" },
-          { key: "CA" as const, label: "🇨🇦 Canada (CAD)" },
-        ].map((item) => {
-          const isActive = region === item.key;
-          return (
-            <button
-              key={item.key}
-              type="button"
-              onClick={() => setRegion(item.key)}
-              className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
-                isActive
-                  ? "bg-charcoal text-white shadow-sm ring-2 ring-brass"
-                  : "bg-sand/70 text-slate hover:text-charcoal hover:bg-sand border border-sand-border"
-              }`}
-            >
-              <span>{item.label}</span>
-            </button>
-          );
-        })}
-      </div>
+      {/* ── Region / Currency Switcher (Hidden for domestic, only shown if multiple currencies allowed) ── */}
+      {availableTabs.length > 1 && (
+        <div className="mt-8 flex flex-wrap items-center gap-2">
+          <span className="font-mono text-xs font-semibold text-slate mr-1">
+            {t.pricing.currencySelectorLabel}
+          </span>
+          {availableTabs.map((item) => {
+            const isActive = region === item.key;
+            return (
+              <button
+                key={item.key}
+                type="button"
+                onClick={() => setRegion(item.key)}
+                className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                  isActive
+                    ? "bg-charcoal text-white shadow-sm ring-2 ring-brass"
+                    : "bg-sand/70 text-slate hover:text-charcoal hover:bg-sand border border-sand-border"
+                }`}
+              >
+                <span>{item.label}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       {/* ── 3 Pricing Tiers ── */}
       <div className="grid md:grid-cols-3 gap-6 mt-8 items-stretch">
