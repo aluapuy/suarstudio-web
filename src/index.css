@@ -62,3 +62,51 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ── Hero Gradient Sweep & Holy Glow (Inspired by details.so/vault/text-reveal-06) ── */
+@keyframes hero-gradient-sweep {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: -100% 50%;
+  }
+}
+
+@keyframes hero-halo-pulse {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.hero-gradient-sweep-text {
+  background: linear-gradient(
+    110deg,
+    #8A3416 0%,
+    #9E4424 20%,
+    #C57E2A 40%,
+    #E6A838 50%,
+    #C57E2A 60%,
+    #9E4424 80%,
+    #8A3416 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: hero-gradient-sweep 5s ease-in-out infinite;
+  display: inline-block;
+  will-change: background-position;
+  filter: drop-shadow(0 0 10px rgba(217, 155, 38, 0.35)) drop-shadow(0 2px 14px rgba(194, 94, 56, 0.22));
+}
+
+.hero-halo-glow {
+  animation: hero-halo-pulse 4s ease-in-out infinite;
+  will-change: opacity, transform;
+}

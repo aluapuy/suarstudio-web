@@ -41,7 +41,7 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-[54px] leading-[1.08] text-charcoal">
-            <Rich text={t.hero.headline} />
+            <Rich text={t.hero.headline} glow underline={false} />
           </h1>
 
           {/* Subheadline */}
