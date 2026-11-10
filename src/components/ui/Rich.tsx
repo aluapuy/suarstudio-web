@@ -24,22 +24,9 @@ export function Rich({
       return (
         <span
           key={i}
-          className="relative inline-block font-serif italic mx-0.5 align-baseline"
+          className="relative inline-block font-serif italic mx-0.5 align-baseline hero-gradient-sweep-text"
         >
-          {/* Delicate Warm Golden Ambient Backlight Halo */}
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute -inset-x-3 -inset-y-1.5 rounded-full hero-halo-glow select-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, rgba(217, 155, 38, 0.22) 0%, rgba(224, 109, 59, 0.1) 50%, transparent 75%)",
-            }}
-          />
-
-          {/* Crisp High-Contrast Gradient Shimmer Text */}
-          <span className="relative z-10 hero-gradient-sweep-text font-serif italic">
-            {content}
-          </span>
+          {content}
         </span>
       );
     }
